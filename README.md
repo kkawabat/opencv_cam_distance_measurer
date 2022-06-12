@@ -2,6 +2,13 @@
 
 This project allows you to measure the distance from camera to qr code or distance from camera to face.
 
+face distance demo:  
+![](docs/face_distance_demo.mp4)
+
+qr code distance demo:  
+![](docs/qr_code_distance_demo.mp4)
+
+
 ## requirements
 poetry 
 
