@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "opencv_qr_distance"
+name = "opencv_cam_distance_measurer"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Kan Kawabata <kkawabat@asu.edu>"]
+packages = [{include = "opencv_dist_measurer", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 opencv-python = "^4.6.0"
-matplotlib = "^3.5.2"
 opencv-contrib-python = "^4.6.0"
 
 [tool.poetry.dev-dependencies]

@@ -1,8 +1,8 @@
 import numpy as np
 
-from src.qr_code_distance_algo import LOGI_WEBCAM_SENSOR_MM_HEIGHT, LOGI_WEBCAM_FOCAL_LENGTH_MM
+from opencv_dist_measurer.qr_code_distance_algo import LOGI_WEBCAM_SENSOR_MM_HEIGHT, LOGI_WEBCAM_FOCAL_LENGTH_MM
 
-EYE_DISTANCE_MM = 61 # average distance between eyes: 54-68mm
+EYE_DISTANCE_MM = 61  # average distance between eyes: 54-68mm
 
 
 def distance_to_face(landmark, sensor_pixel_height):

@@ -1,6 +1,6 @@
 import cv2
 
-from src.facial_distance_draw import add_facial_distance_img
+from opencv_dist_measurer.facial_distance_draw import add_facial_distance_img
 
 
 def display_face_dist_webcam():

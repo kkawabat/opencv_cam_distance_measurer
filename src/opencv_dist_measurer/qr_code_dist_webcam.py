@@ -5,7 +5,7 @@ via the new Pythonic cv2 interface.  Press <esc> to quit.
 
 import cv2
 
-from src.qr_code_distance_draw import add_qr_code_distance_img
+from opencv_dist_measurer.qr_code_distance_draw import add_qr_code_distance_img
 
 
 def display_qr_dist_webcam():

@@ -2,9 +2,9 @@ import os
 
 import cv2
 
-from src.facial_distance_draw import get_face_landmarks, add_facial_distance_img
-from src.qr_code_dist_webcam import disp_qr_code_distance_img_file
-from src.qr_code_distance_draw import get_qr_code_bounding_box, get_quadrilateral_skewness
+from src.opencv_dist_measurer.facial_distance_draw import get_face_landmarks, add_facial_distance_img
+from src.opencv_dist_measurer.qr_code_dist_webcam import disp_qr_code_distance_img_file
+from src.opencv_dist_measurer.qr_code_distance_draw import get_qr_code_bounding_box, get_quadrilateral_skewness
 
 
 def test_find_qr_code():

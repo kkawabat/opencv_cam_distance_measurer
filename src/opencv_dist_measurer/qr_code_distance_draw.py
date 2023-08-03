@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from src.qr_code_distance_algo import dist_to_qr_code, draw_distance_to_qr_code
+from opencv_dist_measurer.qr_code_distance_algo import dist_to_qr_code, draw_distance_to_qr_code
 
 detector = cv2.QRCodeDetector()
 
