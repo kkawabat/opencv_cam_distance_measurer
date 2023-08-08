@@ -2,24 +2,28 @@ import os
 
 import cv2
 
+from src.opencv_dist_measurer.dist_main import dist_image_file
 from src.opencv_dist_measurer.facial_distance_draw import get_face_landmarks, add_facial_distance_img
-from src.opencv_dist_measurer.qr_code_dist_webcam import disp_qr_code_distance_img_file
 from src.opencv_dist_measurer.qr_code_distance_draw import get_qr_code_bounding_box, get_quadrilateral_skewness
 
 
 def test_find_qr_code():
-    disp_qr_code_distance_img_file(os.path.join('test_data', 'barcode1.png'))
-    disp_qr_code_distance_img_file(os.path.join('test_data', 'barcode2.png'))
+    dist_image_file(os.path.join('test_data', 'barcode1.png'), 'qr')
+    dist_image_file(os.path.join('test_data', 'barcode2.png'), 'qr')
 
 
 def test_get_qr_code_bounding_box():
     img2 = cv2.imread(os.path.join('test_data', 'barcode2.png'))
     bbox2 = get_qr_code_bounding_box(img2)
-    # assert bbox is not None
+    assert bbox2 is not None
 
     img = cv2.imread(os.path.join('test_data', 'barcode1.png'))
     bbox = get_qr_code_bounding_box(img)
     assert bbox is not None
+
+    img = cv2.imread(os.path.join('test_data', 'face1.png'))
+    bbox = get_qr_code_bounding_box(img)
+    assert bbox is None
 
 
 def test_get_quadrilateral_skewness():

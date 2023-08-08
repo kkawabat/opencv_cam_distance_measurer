@@ -7,8 +7,7 @@ packages = [{include = "opencv_dist_measurer", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-opencv-python = "^4.6.0"
-opencv-contrib-python = "^4.6.0"
+opencv-contrib-python = "^4.8.0.74"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
