@@ -1,6 +1,6 @@
 import cv2
 
-from src.opencv_dist_measurer.distance_draw import add_qr_code_distance_img, add_facial_distance_img
+from .distance_draw import add_qr_code_distance_img, add_facial_distance_img
 
 
 def dist_webcam(detector='face'):

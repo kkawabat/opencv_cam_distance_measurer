@@ -5,7 +5,7 @@ import numpy as np
 
 MODEL_DIR = join(dirname(abspath(__file__)), 'model')
 
-FACE_DETECTOR = cv2.CascadeClassifier(join(MODEL_DIR, 'haarcascade_face_model.xml'))
+FACE_DETECTOR = cv2.CascadeClassifier(join(MODEL_DIR, 'lbpcascade_frontalface_improved.xml'))
 
 FACE_LANDMARK_DETECTOR = cv2.face.createFacemarkLBF()
 FACE_LANDMARK_DETECTOR.loadModel(join(MODEL_DIR, 'lbfmodel.yaml'))
@@ -13,7 +13,14 @@ QR_DETECTOR = cv2.QRCodeDetector()
 
 
 def get_face_landmarks(img):
-    faces = FACE_DETECTOR.detectMultiScale(img)
+    faces = FACE_DETECTOR.detectMultiScale(img,
+                                           scaleFactor=1.3,
+                                           minNeighbors=4,
+                                           minSize=(30, 30),
+                                           flags=cv2.CASCADE_SCALE_IMAGE
+                                           )
+    if len(faces) == 0:
+        return []
     _, landmarks = FACE_LANDMARK_DETECTOR.fit(img, faces=faces)
     return landmarks
 

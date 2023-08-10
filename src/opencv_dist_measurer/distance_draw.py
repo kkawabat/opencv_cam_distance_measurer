@@ -1,6 +1,6 @@
-from src.opencv_dist_measurer.detector_algorithms import get_qr_code_bounding_box, get_face_landmarks
-from src.opencv_dist_measurer.distance_algorithms import distance_to_qr, distance_to_face
-from src.opencv_dist_measurer.drawer import draw_distance_info, draw_qr_code_bbox, draw_landmarks
+from .detector_algorithms import get_qr_code_bounding_box, get_face_landmarks
+from .distance_algorithms import distance_to_qr, distance_to_face
+from .drawer import draw_distance_info, draw_qr_code_bbox, draw_landmarks
 
 
 def add_qr_code_distance_img(frame):
