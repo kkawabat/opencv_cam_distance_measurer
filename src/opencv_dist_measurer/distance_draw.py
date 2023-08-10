@@ -24,3 +24,4 @@ def add_facial_distance_img(frame):
     coord = tuple(landmarks[0][0, 20].astype(int))
     draw_distance_info(dist, coord, frame)
     draw_landmarks(landmarks, frame)
+    return frame
