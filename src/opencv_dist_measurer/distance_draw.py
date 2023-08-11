@@ -6,13 +6,14 @@ from .drawer import draw_distance_info, draw_qr_code_bbox, draw_landmarks
 def add_qr_code_distance_img(frame):
     bbox = get_qr_code_bounding_box(frame)
     if len(bbox) == 0:
-        return
+        return frame
 
     coord = tuple(bbox[0][0].astype(int))
     dist = distance_to_qr(bbox, len(frame))
 
     draw_distance_info(dist, coord, frame)
     draw_qr_code_bbox(bbox, frame)
+    return frame
 
 
 def add_facial_distance_img(frame):

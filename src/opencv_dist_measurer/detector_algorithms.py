@@ -38,7 +38,8 @@ def get_qr_code_bounding_box(img):
 def is_valid_bbox(bbox):
     skewness = get_quadrilateral_skewness(bbox)
     if skewness > .5:
-        raise Exception(f'invalid qr bound')
+        return False
+    return True
 
 
 def get_quadrilateral_skewness(bbox):
